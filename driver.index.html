@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KassiFleet | Driver</title>
+  <link rel="stylesheet" href="css.js">
+  <script src="driver.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Kassi<span>Fleet</span></a>
+    <span>Driver portal</span>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">DELIVER WITH KASSIFLEET</p>
+      <h1>Your deliveries, one dashboard.</h1>
+      <p>Manage your assigned deliveries and update their status.</p>
+    </section>
+    <section class="panel">
+      <h2>Driver sign in</h2>
+      <form id="loginForm">
+        <label>Email<input name="email" type="email" required></label>
+        <label>Password<input name="password" type="password" required></label>
+        <button>Sign in</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+    <section class="panel">
+      <h2>Register as a driver</h2>
+      <form id="registerForm">
+        <label>Full name<input name="name" autocomplete="name" required maxlength="100"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="new-password" required minlength="8"></label>
+        <button class="secondary">Create driver account</button>
+      </form>
+    </section>
+    <section class="panel">
+      <h2>My deliveries</h2>
+      <p class="muted">Assigned orders will appear here once the driver-orders endpoint is enabled.</p>
+      <div id="deliveries"></div>
+    </section>
+  </main>
+</body>
+</html>
